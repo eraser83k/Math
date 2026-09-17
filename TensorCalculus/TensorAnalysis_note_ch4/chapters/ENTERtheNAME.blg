@@ -1,0 +1,9 @@
+[0] Config.pm:304> INFO - This is Biber 2.14 (beta)
+[0] Config.pm:307> INFO - Logfile is 'chapters/ENTERtheNAME.blg'
+[70] biber:322> INFO - === Sun Apr 12, 2026, 04:48:42
+[82] Biber.pm:415> INFO - Reading 'chapters/ENTERtheNAME.bcf'
+[144] Biber.pm:943> INFO - Found 0 citekeys in bib section 0
+[149] Utils.pm:293> WARN - The file 'chapters/ENTERtheNAME.bcf' does not contain any citations!
+[154] bbl.pm:652> INFO - Writing 'chapters/ENTERtheNAME.bbl' with encoding 'UTF-8'
+[155] bbl.pm:755> INFO - Output to chapters/ENTERtheNAME.bbl
+[155] Biber.pm:128> INFO - WARNINGS: 1

@@ -1,0 +1,49 @@
+\documentclass[../main.tex]{subfiles}
+
+\begin{document}
+
+
+\vfill
+\newpage
+\chapter{Change of Coordinates}
+\section{Chain Rule in Tensor Notation}
+
+The core is: \textit{\textbf{contract}} the notation!
+
+ Consider a mapping from independent variables $\mu, \nu$ to one dependent variable to another.
+
+Using chain rule, 
+$$\Pfrac{f}{\mu}=\Pfrac{F}{a}\Pfrac{A}{\mu}+\Pfrac{F}{b}\Pfrac{B}{\mu}+\Pfrac{F}{c}\Pfrac{C}{\mu}$$
+
+and
+
+$$
+\Pfrac{f}{\nu}=\Pfrac{F}{a}\Pfrac{A}{\nu}+\Pfrac{F}{b}\Pfrac{B}{\nu}+\Pfrac{F}{c}\Pfrac{C}{\nu}
+$$
+
+From here, we use \textit{Einstein Summation Notation} to write them simply. 
+$$\Pfrac{F}{a^i}\Pfrac{A^i}{\mu}$$
+Finally, we also contract $\mu$ and $\nu$ to $\mu^i$ s.t.,
+
+\begin{equation}
+\Pfrac{f}{\mu^{\alpha}}=\Pfrac{F}{a^i}\Pfrac{A^i}{\mu^{\alpha}}
+\end{equation}
+
+\section{Inverse Functions of Several Variables}
+
+Consider the mapping from $\Z$ to $Z'$ and then again to $Z$. By the chain rule, we have:
+
+\begin{equation}
+\Pfrac{Z^i(Z'(Z))}{Z^j}=\Pfrac{Z^i}{Z^{i'}}\Pfrac{Z^{i'}}{Z^j}.=J^i_{i'}J^{i'}_j
+\end{equation}
+
+Since differention of $Z^i$ with respect to $Z^j$ is $\delta^i_j$, we have:
+
+\begin{equation}
+    J^i_{i'}J^{i'}_j=\delta^i_j
+\end{equation}
+
+(1.3) means that $J^i_{i'}$ and $J^{i'}_j$ are inverses of each other. s.t.,
+$$(J^\cdot_{\cdot'})^{-1}=J^{\cdot'}_\cdot.$$
+
+\end{document}

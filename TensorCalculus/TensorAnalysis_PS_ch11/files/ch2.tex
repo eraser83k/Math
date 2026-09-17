@@ -1,0 +1,128 @@
+\documentclass[../main.tex]{subfiles}
+\begin{document}
+\section{Rules of the Game}
+
+\quad Before we begin, consider some geometrical logic that can be applied to n-dimensional space. For the Pythagorean Theorem and law of cosines, we can treat them also in n-dimensional Euclidean space without proof; they are related to only two vectors. 
+
+In Linear Algebra, treating two vectors means that there is a subspace spanned by the vectors, and the space itself has a degree of freedom, 2 (already proved from two-dimensional Euclidean Space.) That is, no matter what basis vectors are set and how many vectors are in the space, we only cover two-dimensional space such that we can still use the properties:
+
+\begin{center}
+\begin{tikzpicture}[->]
+  \draw (0,0,0) -- (xyz spherical cs:radius=3);
+  \draw (0,0,0) -- (xyz spherical cs:radius=3,latitude=90);
+  \draw (0,0,0) -- (xyz spherical cs:radius=3,longitude=90);
+  \coordinate[label=left:{$O$}] (O) at (0,0,0);
+  \coordinate[label=left:{$A$}] (A) at (2,3,6);
+  \coordinate[label=right:{$P$}] (B) at (3,2,3);
+  \coordinate[label=above:{$Q$}] (C) at (1,3,2);
+
+  \filldraw (A) circle[radius=1pt];
+
+  \filldraw[fill=cyan!20!white, draw=none] (A)--(B)--(C)--cycle;
+  \draw[->] (A)--(B) node[midway, below] {$V$};
+  \draw[->] (A)--(C) node[midway, left] {$U$};;
+
+\end{tikzpicture}
+\end{center}
+
+\textbf{Law of Cosines}
+
+\begin{center}
+    \begin{equation}
+        \Norm{U-V}^2=\Norm{U}^2+\Norm{V}^2-2\Norm{U}\Norm{V}\cos{\alpha}
+    \end{equation}
+\end{center}
+
+\begin{center}
+    \begin{equation}
+        \Norm{U-V}^2=\Norm{U}^2+\Norm{V}^2-2U\cdot V
+    \end{equation}
+\end{center}
+
+\textbf{Pythagorean Theorem}, in case of $\alpha=0^{\circ}$
+
+\begin{center}
+    \begin{equation}
+        \Norm{U-V}^2=\Norm{U}^2+\Norm{V}^2
+    \end{equation}
+\end{center}
+
+From the Law of Cosines, we can also find the formula for the dot product without the angle:
+
+$$
+U\cdot V=\frac{\Norm{U}^2+\Norm{V}^2-\Norm{U-V}^2}{2}
+$$
+
+$$
+U\cdot (-V)=\frac{\Norm{U}^2+\Norm{V}^2-\Norm{U+V}^2}{2}
+$$
+
+which gives the formula
+
+\begin{center}
+    \begin{equation}
+        U\cdot V=\frac{\Norm{U+V}^2-\Norm{U-V}^2}{4}
+    \end{equation}
+\end{center}
+
+\subsection{Exercise 6.}
+To demonstrate geometrically that the dot product is distributive, we can use the properties of vectors and the geometric interpretation of the dot product.
+
+\sol
+
+Consider three vectors $U_1$, $U_2$ and $V$. Since the dimension of a subspace that can be made by them is at most three, they can be treated as vectors in three-dimensional space by a well-defined basis. 
+
+Now, they are represented in a cylinder parallel to the direction of V:
+
+\begin{center}
+    \begin{tikzpicture}
+    
+        \begin{scope}[canvas is zy plane at x=0]
+            \draw[dashed] (0,0) circle (1.4cm);
+            \draw (-2,0) -- (2,0) (0,-2) -- (0,2);
+        \end{scope}
+
+        \begin{scope}[canvas is zy plane at x=3]
+            \draw (0,0) circle (2cm);
+            
+        \end{scope}
+
+        \begin{scope}[canvas is zy plane at x=5]
+            \draw (0,0) circle (1.4cm);
+            \draw[dashed] (0,0) circle (2cm);
+        \end{scope}
+        
+    \coordinate (A') at (3,0,0);
+    \coordinate (B') at (5,0,0);
+    \coordinate[label=left:{$A$}] (A) at (3, {2*cos(110)}, {2*sin(110)});
+    \coordinate[label=above:{$B$}] (B) at (5, {1.4*cos(0)}, {1.4*sin(0)});
+    \coordinate (B*) at (5, {2*cos(110)}, {2*sin(110)});
+    
+    \draw[->] (0,0,0)--(6,0,0) node[right] {$V$};
+    \filldraw (A) circle[radius=1pt];
+    \filldraw (B) circle[radius=1pt];
+    \draw[->] (0,0,0)--(A) node[midway,below] {$U_1$};
+    \draw[->] (A)--(B) node[pos=0.25,right] {$U_2$};
+    \draw[->] (0,0,0)--(B) node[midway,above] {$U_1+U_2$};
+
+    \draw[->,red] (0,0,0)--(A') node[midway,above] {$Proj_VU_1$};
+    \draw[->,blue] (A)--(B*) node[midway,below] {$Proj_VU_2$};
+    \draw[->,blue] (A')--(B') node[midway,below] {$Proj_VU_2$};
+    \draw[->,cyan] (0,{1.4*cos(0)}, {1.4*sin(0)})--(5,{1.4*cos(0)}, {1.4*sin(0)}) node[midway,above] {$Proj_V(U_1+U_2)$};
+    \draw[dashed,blue] (A)--(A');
+    \draw[dashed,blue] (B*)--(B');
+    
+  
+    \end{tikzpicture}
+\end{center}
+
+From the figure, Projection of $U_1+U_2$ now has same direction with $Proj_vU_1$ and $Proj_VU_2$ such that the following holds:
+
+$$
+Proj_V(U_1+U_2)=Proj_VU_1+Proj_VU_2 \longleftrightarrow \Norm{V}(Proj_V(U_1+U_2))=\Norm{V}(Proj_VU_1+Proj_VU_2)
+$$
+
+$$\longrightarrow (U_1+U_2)\cdot V=U_1\cdot V+ U_2\cdot V$$
+\qed
+
+\end{document}

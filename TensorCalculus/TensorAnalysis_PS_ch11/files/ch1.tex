@@ -1,0 +1,150 @@
+\documentclass[../main.tex]{subfiles}
+\begin{document}
+
+
+\section{Properties of the Surface Covariant Derivative}
+
+\subsection{Exercise229. }Show the tensor property of the surface covariant derivative.
+
+\sol
+
+Let's start by recalling the definition of the surface covariant derivative.
+
+\begin{equation}
+    \nabla_\nu{T^\alpha_\beta}
+    =\frac{\partial T^\alpha_\beta}{\partial S^\nu}
+    +\Gamma^\alpha_{\nu\omega}T^\omega_\beta
+    -\Gamma^\omega_{\nu\beta}T^\alpha_\omega.
+    \label{surface_covariant_derivative_def}
+\end{equation}
+
+To show the tensor propery of the given expression, we need to change all the indices with prim indices and then revert to the original indices with Jacobian matrices.
+The transformation law may then be expressed in terms of partial derivatives of the coordinate functions, which means
+
+
+$$
+    \nabla_{\nu'}{T^{\alpha'}_{\beta'}}
+    =\left( \frac{\partial T^\alpha_\beta}{\partial S^\nu}
+    +\Gamma^\alpha_{\nu\omega}T^\omega_\beta
+    -\Gamma^\omega_{\nu\beta}T^\alpha_\omega\right) 
+    J^{{\alpha}'}_{\alpha}J^\beta_{{\beta}'}J^\nu_{{\nu}'}.
+$$
+or more simply
+\begin{equation}
+    \nabla_{\nu'}{T^{\alpha'}_{\beta'}
+    }=\left( \nabla_{\nu}{T^{\alpha}_{\beta}} \right) 
+    J^{{\alpha}'}_{\alpha}J^\beta_{{\beta}'}J^\nu_{{\nu}'}.
+\end{equation}
+
+By putting prime indices on \ref{surface_covariant_derivative_def}, we get
+
+\begin{equation}
+    \nabla_{\nu'}{T^{\alpha'}_{\beta'}}
+    =\frac{\partial T^{\alpha'}_{\beta'}}{\partial S^{\nu'}}
+    +\Gamma^{\alpha'}_{\nu'\omega'}T^{\omega'}_{\beta'}
+    -\Gamma^{\omega'}_{\nu'\beta'}T^{\alpha'}_{\omega'}.
+    \label{eqmain}
+\end{equation}
+
+And now look at the terms each by each.
+
+\begin{subequations}
+\begin{align}
+    \frac{\partial T^{\alpha'}_{\beta'}}{\partial S^{\nu'}} \label{eq1}\\
+    \Gamma^{\alpha'}_{\nu'\omega'}T^{\omega'}_{\beta'} \label{eq2}\\
+    \Gamma^{\omega'}_{\nu'\beta'}T^{\alpha'}_{\omega'} \label{eq3}
+\end{align}
+\end{subequations}
+
+(\ref{eq1})
+
+\begin{multline}
+\frac{\partial T^{\alpha'}_{\beta'}}{\partial S^{\nu'}}
+    =\frac{\partial \left(T^{\alpha}_{\beta}J^{\alpha'}_{\alpha}J^{\beta}_{\beta'}\right)}{\partial S^{\nu'}}
+    =\frac{\partial T^{\alpha}_{\beta}}{\partial S^{\nu'}}
+    J^{\alpha'}_{\alpha}J^{\beta}_{\beta'}
+    +T^{\alpha}_{\beta}\frac{\partial J^{\alpha'}_{\alpha}}{\partial S^{\nu'}}J^{\beta}_{\beta'}
+    +T^{\alpha}_{\beta}J^{\alpha'}_{\alpha}\frac{\partial J^{\beta}_{\beta'}}{\partial S^{\nu'}} \\
+    =\frac{\partial T^{\alpha}_{\beta}}{\partial S^{\nu}}
+    \left(J^{\alpha'}_{\alpha}J^{\beta}_{\beta'}J^{\nu}_{\nu'}\right)
+    +T^{\alpha}_{\beta}J^{\alpha'}_{\alpha \omega}J^{\beta}_{\beta'}J^{\omega}_{\nu'}
+    +T^{\alpha}_{\beta}J^{\alpha'}_{\alpha}J^{\beta}_{\beta' \nu'}.
+\end{multline}
+
+\newpage
+
+Before treating \ref{eq2} and \ref{eq3}, let us look at the the definition of the \textbf{Christoffel symbols on embedded surfaces}.
+\begin{equation}
+    \Gamma^{\alpha}_{\beta \nu}=\mathbf{S}^{\alpha}\cdot\frac{\partial \mathbf{S_\beta}}{\partial S^\nu}
+    \label{christoffel_symbols_embedded_surface_def}
+\end{equation}
+
+(\ref{eq2})
+
+\begin{flalign*}
+\Gamma^{\alpha'}_{\nu'\omega'}T^{\omega'}_{\beta'}
+    &= \mathbf{S}^{\alpha'}\cdot \frac{\partial \mathbf{S_{\nu'}}}{\partial S^{\omega'}} T^{\omega'}_{\beta'}
+    = \mathbf{S}^{\alpha'}\cdot \frac{\partial \left( \mathbf{S_{\nu}} J^{\nu}_{\nu'} \right)}{\partial S^{\omega'}} T^{\omega}_{\beta}J^{\omega'}_{\omega}J^{\beta}_{\beta'} && \\
+    &= \left( \mathbf{S}^{\alpha}\cdot \frac{\partial  \mathbf{S_{\nu}}  }{\partial S^{\omega'}} J^{\nu}_{\nu'} 
+    + \mathbf{S}^{\alpha}\cdot\mathbf{S_{\nu}} \frac{\partial J^{\nu}_{\nu'} }{\partial S^{\omega'}}  \right) T^{\omega}_{\beta}J^{\omega'}_{\omega}J^{\alpha'}_\alpha J^{\beta}_{\beta'} && \\
+    &= \left( \mathbf{S}^{\alpha}\cdot \frac{\partial  \mathbf{S_{\nu}}  }{\partial S^{\rho}}J^\rho_{\omega'} J^{\nu}_{\nu'} 
+    + \delta^\alpha_\nu J^\nu_{\nu' \omega'}  \right) T^{\omega}_{\beta}J^{\omega'}_{\omega}J^{\alpha'}_\alpha J^{\beta}_{\beta'} && \\
+    &=\left( \Gamma^\alpha_{\nu \rho}J^\rho_{\omega'} J^{\nu}_{\nu'} 
+    + \delta^\alpha_\nu J^\nu_{\nu' \omega'}  \right) T^{\omega}_{\beta}J^{\omega'}_{\omega}J^{\alpha'}_\alpha J^{\beta}_{\beta'} &&\\
+    &= T^{\omega}_{\beta}\Gamma^\alpha_{\nu \rho}J^{\alpha'}_\alpha J^{\beta}_{\beta'}J^{\omega'}_{\omega}J^\rho_{\omega'}J^{\nu}_{\nu'}
+    + T^{\omega}_{\beta}J^{\alpha'}_\alpha J^{\beta}_{\beta'} J^{\omega'}_{\omega} \delta^\alpha_\nu  J^\nu_{\nu' \omega'} &&\\
+    &=T^{\omega}_{\beta}\Gamma^\alpha_{\nu \rho}J^{\alpha'}_\alpha J^{\beta}_{\beta'}\delta^\rho_\omega J^{\nu}_{\nu'}
+    + T^{\omega}_{\beta}J^{\alpha'}_\alpha J^{\beta}_{\beta'} J^{\omega'}_{\omega}  J^\alpha_{\nu' \omega'}&&\\
+    &=T^{\omega}_{\beta}\Gamma^\alpha_{\nu \omega}J^{\alpha'}_\alpha J^{\beta}_{\beta'} J^{\nu}_{\nu'}
+    + T^{\omega}_{\beta}J^{\alpha'}_\alpha J^\alpha_{\nu' \omega'}J^{\beta}_{\beta'} J^{\omega'}_{\omega}   &&\\
+    &=\Gamma^\alpha_{\nu \omega}T^{\omega}_{\beta}\left( J^{\alpha'}_\alpha J^{\beta}_{\beta'} J^{\nu}_{\nu'}
+    \right)+ T^{\omega}_{\beta}J^{\alpha'}_\alpha J^\alpha_{\nu' \omega'}J^{\beta}_{\beta'} J^{\omega'}_{\omega} .
+\end{flalign*}
+
+(\ref{eq3})
+\begin{flalign*}
+    \Gamma^{\omega'}_{\nu'\beta'}T^{\alpha'}_{\omega'}
+    &= \mathbf{S}^{\omega'}\cdot \frac{\partial \mathbf{S_{\nu'}}}{\partial S^{\beta'}} T^{\alpha'}_{\omega'} && \\
+    &= \mathbf{S}^{\omega}\cdot \frac{\partial \left(\mathbf{S_{\nu}}J^{\nu}_{\nu'} \right)}{\partial S^{\beta'}} T^{\alpha}_{\omega} J^{\alpha'}_{\alpha}J^{\omega}_{\omega'}J^{\omega'}_\rho && \\
+    &= \mathbf{S}^{\omega}\cdot \frac{\partial \left(\mathbf{S_{\nu}}J^{\nu}_{\nu'} \right)}{\partial S^{\beta'}} T^{\alpha}_{\omega} J^{\alpha'}_{\alpha} \delta^\omega_\rho && \\
+    &=\left(  \mathbf{S}^{\rho}\cdot \frac{\partial \mathbf{S_\nu}}{\partial S^\beta} J^{\beta}_{\beta'} J^\nu_{\nu'} 
+    + J^\rho_{\nu' \beta'}  \right) T^{\alpha}_{\rho} J^{\alpha'}_{\alpha}  && \\
+    &=\left(  \Gamma^\rho_{\nu \beta} J^{\beta}_{\beta'} J^\nu_{\nu'} 
+    + J^\rho_{\nu' \beta'}  \right) T^{\alpha}_{\rho} J^{\alpha'}_{\alpha}  && \\
+    &= T^{\alpha}_{\rho}\Gamma^\rho_{\nu \beta}  J^{\alpha'}_{\alpha}J^{\beta}_{\beta'} J^\nu_{\nu'} 
+    + T^{\alpha}_{\rho}J^\rho_{\nu' \beta'}  J^{\alpha'}_{\alpha}    && \\
+    &= \Gamma^\rho_{\nu \beta} T^{\alpha}_{\rho} \left(J^{\alpha'}_{\alpha}J^{\beta}_{\beta'} J^\nu_{\nu'} \right)
+    + T^{\alpha}_{\rho}J^\rho_{\nu' \beta'}  J^{\alpha'}_{\alpha}.   && \\
+\end{flalign*}
+
+Now putting all the terms in \ref{eqmain}, we get
+
+
+\begin{flalign*}
+    \nabla_{\nu'}{T^{\alpha'}_{\beta'}}
+    &= \mathbf{S}^{\omega'}\cdot \frac{\partial \mathbf{S_{\nu'}}}{\partial S^{\beta'}} T^{\alpha'}_{\omega'} && \\
+    &=\frac{\partial T^{\alpha}_{\beta}}{\partial S^{\nu}}
+    J^{\alpha'}_{\alpha}J^{\beta}_{\beta'}J^{\nu}_{\nu'}
+    +T^{\alpha}_{\beta}J^{\alpha'}_{\alpha \omega}J^{\beta}_{\beta'}J^{\omega}_{\nu'}
+    +T^{\alpha}_{\beta}\left(J^{\alpha'}_{\alpha}J^{\beta}_{\beta' \nu'}\right) &&\\
+    &+\Gamma^\alpha_{\nu \omega}T^{\omega}_{\beta}\left( J^{\alpha'}_\alpha J^{\beta}_{\beta'} J^{\nu}_{\nu'}
+    \right)+ T^{\omega}_{\beta}J^{\alpha'}_\alpha J^\alpha_{\nu' \omega'}J^{\beta}_{\beta'} J^{\omega'}_{\omega}
+    -\Gamma^\rho_{\nu \beta} T^{\alpha}_{\rho} \left(J^{\alpha'}_{\alpha}J^{\beta}_{\beta'} J^\nu_{\nu'} \right)
+    - T^{\alpha}_{\rho}J^\rho_{\nu' \beta'}  J^{\alpha'}_{\alpha} &&\\
+    &=\left(\frac{\partial T^{\alpha}_{\beta}}{\partial S^{\nu}}+\Gamma^\alpha_{\nu \omega}T^{\omega}_{\beta}-\Gamma^\rho_{\nu \beta} T^{\alpha}_{\rho}\right)
+    \left(J^{\alpha'}_{\alpha}J^{\beta}_{\beta'}J^{\nu}_{\nu'} \right) &&\\
+    &+T^{\alpha}_{\beta}J^{\alpha'}_{\alpha \omega}J^{\beta}_{\beta'}J^{\omega}_{\nu'}
+    +T^{\alpha}_{\beta}J^{\alpha'}_{\alpha}J^{\beta}_{\beta' \nu'}
+    + T^{\omega}_{\beta}J^{\alpha'}_\alpha J^\alpha_{\nu' \omega'}J^{\beta}_{\beta'} J^{\omega'}_{\omega}
+    - T^{\alpha}_{\rho}J^\rho_{\nu' \beta'}  J^{\alpha'}_{\alpha} &&\\
+    &=\left( \nabla_{\nu}{T^{\alpha}_{\beta}} \right) 
+    \left(J^{\alpha'}_{\alpha}J^{\beta}_{\beta'}J^{\nu}_{\nu'} \right) &&\\
+    &+T^{\alpha}_{\beta}J^{\alpha'}_{\alpha \omega}J^{\beta}_{\beta'}J^{\omega}_{\nu'}
+    +T^{\alpha}_{\beta}J^{\alpha'}_{\alpha}J^{\beta}_{\beta' \nu'}
+    + T^{\omega}_{\beta}J^{\alpha'}_\alpha J^\alpha_{\nu' \omega'}J^{\beta}_{\beta'} J^{\omega'}_{\omega}
+    - T^{\alpha}_{\rho}J^\rho_{\nu' \beta'}  J^{\alpha'}_{\alpha}. &&\\
+\end{flalign*}
+
+And since $T^{\alpha}_{\beta}J^{\alpha'}_{\alpha}J^{\beta}_{\beta' \nu'}$
+
+\end{document}

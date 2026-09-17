@@ -1,0 +1,56 @@
+\documentclass[../main.tex]{subfiles}
+\begin{document}
+
+\section{The Jacobian Property in Tensor Notation}
+
+\begin{equation}
+    J^i_{i' j'}+J^{k'}_{kj}J^i_{k'}J^j_{j'}J^k_{i'}=0.
+    \label{eq:79}
+\end{equation}
+\begin{equation}
+    J^i_{i' j'}J^{i'}_j+J^i_{i'}J^{i'}_{jk}J^k_{j'}=0.
+    \label{eq:80}
+\end{equation}
+
+
+\subsection{Excercise 51.}
+
+
+Derive the identity
+\begin{equation}
+    J^i_{i' j'}+J^{k'}_{kj}J^i_{k'}J^j_{j'}J^k_{i'}=0.
+    \label{eq:81}
+\end{equation}
+Equations \ref{eq:79}, \ref{eq:80}, \ref{eq:81} will prove to be of critical importance in Chap. 8.
+
+
+%-------------------------------------------------------------------------
+
+\sol
+
+From \ref{eq:80}, multiply both sides by $J^j_{k'}$:
+
+
+\begin{equation}
+    J^i_{i' j'}J^{i'}_jJ^j_{k'}+J^i_{i'}J^{i'}_{jk}J^k_{j'}J^j_{k'}
+    = J^i_{i' j'}\delta^{i'}_{k'}+J^i_{i'}J^{i'}_{jk}J^k_{j'}J^j_{k'}
+    = J^i_{k' j'}+J^i_{i'}J^{i'}_{jk}J^k_{j'}J^j_{k'}.
+\end{equation}
+
+From here, swapping $i' \longleftrightarrow k'$ to get
+
+\begin{equation}
+    J^i_{i' j'}+J^i_{k'}J^{k'}_{jk}J^k_{j'}J^j_{i'}.
+\end{equation}
+Then again swapping $j \longleftrightarrow k$ to get
+
+\begin{align}
+    J^i_{i' j'}+J^i_{k'}J^{k'}_{kj}J^j_{j'}J^k_{i'} 
+    = J^i_{i' j'}+J^{k'}_{kj}J^i_{k'}J^j_{j'}J^k_{i'}=0.
+\end{align}
+
+\qed
+
+
+
+\end{document}

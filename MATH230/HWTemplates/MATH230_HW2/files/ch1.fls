@@ -1,8 +1,8 @@
-PWD /Users/jiwookwak/Documents/Projects/Math/MATH230/MATH230_HW2/files
+PWD /Users/jiwookwak/Documents/Projects/Math/MATH230/HWTemplates/MATH230_HW2/files
 INPUT /usr/local/texlive/2026/texmf.cnf
 INPUT /usr/local/texlive/2026/texmf-dist/web2c/texmf.cnf
 INPUT /usr/local/texlive/2026/texmf-var/web2c/pdftex/pdflatex.fmt
-INPUT /Users/jiwookwak/Documents/Projects/Math/MATH230/MATH230_HW2/files/ch1.tex
+INPUT /Users/jiwookwak/Documents/Projects/Math/MATH230/HWTemplates/MATH230_HW2/files/ch1.tex
 OUTPUT ch1.log
 INPUT /usr/local/texlive/2026/texmf-dist/tex/latex/subfiles/subfiles.cls
 INPUT /usr/local/texlive/2026/texmf-dist/tex/latex/subfiles/subfiles.cls

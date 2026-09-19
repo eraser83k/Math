@@ -1,14 +1,14 @@
 # Fdb version 4
 ["makeindex ch1.idx"] 0 "ch1.idx" "ch1.ind" "ch1" 0 -1
-  "ch1.idx" 1789631107.49834 0 d41d8cd98f00b204e9800998ecf8427e "pdflatex"
+  "ch1.idx" 1789807373.19847 0 d41d8cd98f00b204e9800998ecf8427e "pdflatex"
   (generated)
   "ch1.ilg"
   "ch1.ind"
   (rewritten before read)
-["pdflatex"] 1789631106.8645 "/Users/jiwookwak/Documents/Projects/Math/MATH230/MATH230_HW2/files/ch1.tex" "ch1.pdf" "ch1" 1789631110.46014 2
-  "../main.tex" 1789629387.90452 617 a6a28df52c002af3c5576b6c4ed1ba65 ""
+["pdflatex"] 1789807372.71141 "/Users/jiwookwak/Documents/Projects/Math/MATH230/HWTemplates/MATH230_HW2/files/ch1.tex" "ch1.pdf" "ch1" 1789807375.52798 2
+  "../main.tex" 1789631326.69732 617 a6a28df52c002af3c5576b6c4ed1ba65 ""
   "../theorems.tex" 1789629326.61069 11568 f840d1c63af08ab342a35703b76ffcb9 ""
-  "/Users/jiwookwak/Documents/Projects/Math/MATH230/MATH230_HW2/files/ch1.tex" 1789631099.38068 2394 8c91f995e08e13912d0acdf6477fd77e ""
+  "/Users/jiwookwak/Documents/Projects/Math/MATH230/HWTemplates/MATH230_HW2/files/ch1.tex" 1789807367.73474 2399 406558b9543e89208f59ddd1f69a0662 ""
   "/usr/local/texlive/2026/texmf-dist/fonts/enc/dvips/newtx/ntx-ec-tlf-pc.enc" 1698694482 3136 bbe665bd0bb471a2da1e8fd326cff9fa ""
   "/usr/local/texlive/2026/texmf-dist/fonts/enc/dvips/newtx/ntx-ec-tlf.enc" 1698694482 2914 fdbc4a54b9bc76f4551b5303f2737d33 ""
   "/usr/local/texlive/2026/texmf-dist/fonts/map/fontname/texfonts.map" 1577235249 3524 cb3e574dea2d1052e39280babc910dc8 ""
@@ -294,10 +294,10 @@
   "/usr/local/texlive/2026/texmf-var/fonts/map/pdftex/updmap/pdftex.map" 1788103587 5573038 b99aad5e4898a9034e953632f940512b ""
   "/usr/local/texlive/2026/texmf-var/web2c/pdftex/pdflatex.fmt" 1788103525 3636769 c2ce48be246d1f9c3c0e0832700673ca ""
   "/usr/local/texlive/2026/texmf.cnf" 1774209515 577 648cd9f92f9c0eac486f4c71c85cfbbe ""
-  "ch1.aux" 1789631110.25187 534 300594b15941f3016701f83901e2304a "pdflatex"
+  "ch1.aux" 1789807375.35754 534 300594b15941f3016701f83901e2304a "pdflatex"
   "ch1.ind" 0 -1 0 "makeindex ch1.idx"
-  "ch1.mst" 1789631107.49934 223 b8e66a4aaa0f29d90b9c1dae7c1aa92e "pdflatex"
-  "ch1.tex" 1789631099.38068 2394 8c91f995e08e13912d0acdf6477fd77e ""
+  "ch1.mst" 1789807373.19927 223 b8e66a4aaa0f29d90b9c1dae7c1aa92e "pdflatex"
+  "ch1.tex" 1789807367.73474 2399 406558b9543e89208f59ddd1f69a0662 ""
   (generated)
   "ch1.aux"
   "ch1.idx"

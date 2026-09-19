@@ -1,8 +1,8 @@
-PWD /Users/jiwookwak/Documents/Projects/Math/MATH230/MATH230_HW2
+PWD /Users/jiwookwak/Documents/Projects/Math/MATH230/HWTemplates/MATH230_HW2
 INPUT /usr/local/texlive/2026/texmf.cnf
 INPUT /usr/local/texlive/2026/texmf-dist/web2c/texmf.cnf
 INPUT /usr/local/texlive/2026/texmf-var/web2c/pdftex/pdflatex.fmt
-INPUT /Users/jiwookwak/Documents/Projects/Math/MATH230/MATH230_HW2/main.tex
+INPUT /Users/jiwookwak/Documents/Projects/Math/MATH230/HWTemplates/MATH230_HW2/main.tex
 OUTPUT main.log
 INPUT ./homework.cls
 INPUT homework.cls
@@ -627,6 +627,7 @@ INPUT /usr/local/texlive/2026/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.p
 INPUT /usr/local/texlive/2026/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb
 INPUT /usr/local/texlive/2026/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb
 INPUT /usr/local/texlive/2026/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb
+INPUT /usr/local/texlive/2026/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb
 INPUT /usr/local/texlive/2026/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb
 INPUT /usr/local/texlive/2026/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb
 INPUT /usr/local/texlive/2026/texmf-dist/fonts/type1/public/amsfonts/cm/cmr17.pfb

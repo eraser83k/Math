@@ -1,10 +1,10 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.29 (TeX Live 2026) (preloaded format=pdflatex 2026.8.31)  17 SEP 2026 16:45
+This is pdfTeX, Version 3.141592653-2.6-1.40.29 (TeX Live 2026) (preloaded format=pdflatex 2026.8.31)  19 SEP 2026 17:42
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
  %&-line parsing enabled.
-**/Users/jiwookwak/Documents/Projects/Math/MATH230/MATH230_HW2/files/ch1.tex
-(/Users/jiwookwak/Documents/Projects/Math/MATH230/MATH230_HW2/files/ch1.tex
+**/Users/jiwookwak/Documents/Projects/Math/MATH230/HWTemplates/MATH230_HW2/files/ch1.tex
+(/Users/jiwookwak/Documents/Projects/Math/MATH230/HWTemplates/MATH230_HW2/files/ch1.tex
 LaTeX2e <2025-11-01>
 L3 programming layer <2026-01-19>
 (/usr/local/texlive/2026/texmf-dist/tex/latex/subfiles/subfiles.cls
@@ -1467,14 +1467,14 @@ LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
 (\end occurred when \ifx on line 2 was incomplete) 
 Here is how much of TeX's memory you used:
  60742 strings out of 467525
- 1790598 string characters out of 5418982
+ 1790634 string characters out of 5418982
  2241907 words of memory out of 5000000
  88835 multiletter control sequences out of 15000+600000
  649855 words of font info for 79 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 183i,11n,181p,1543b,982s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 183i,11n,181p,1555b,982s stack positions out of 10000i,1000n,20000p,200000b,200000s
 </usr/local/texlive/2026/texmf-dist/fonts/type1/public/newpx/zplb.pfb></usr/local/texlive/2026/texmf-dist/fonts/type1/public/newpx/zplr.pfb>
-Output written on ch1.pdf (1 page, 60731 bytes).
+Output written on ch1.pdf (1 page, 60761 bytes).
 PDF statistics:
  31 PDF objects out of 1000 (max. 8388607)
  22 compressed objects within 1 object stream
